@@ -30,7 +30,8 @@ let recursiveAsyncReadLine = (date, i) => {
             console.log(i);
             dialogJson[date+''].push({
                 type: 'dialog',
-                dialog: input
+                from: input.replace(' ', ';').split(';')[0],
+                dialog: input.replace(' ', ';').split(';')[1]
             });
         }
         console.log('V');
@@ -38,7 +39,7 @@ let recursiveAsyncReadLine = (date, i) => {
     });
 };
 console.log('welcome');
-console.log('day 1');
+console.log('day 1 ');
 
 
 recursiveAsyncReadLine(0, 0);
