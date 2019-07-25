@@ -13,7 +13,7 @@ let recursiveAsyncReadLine = (date, i) => {
             input = input.replace('select ', '').split('|');
             dialogJson[date+''][i] = {
                 type: 'select',
-                selection: [input[0], input[1], input[2]]
+                selection: [{select: input[0].split(';')[0], response: input[0].split(';')[1]}, {select: input[0].split(';')[0], response: input[0].split(';')[1]}, {select: input[0].split(';')[0], response: input[0].split(';')[1]}]
             };
         }
         else if (input === 'end') {
