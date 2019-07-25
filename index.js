@@ -10,7 +10,6 @@ dialogJson = {'0':[]};
 let recursiveAsyncReadLine = (date, i) => {
     rl.question('', (input) => {
         if (input.split(' ')[0] == 'select') {
-            console.log('yay');
             input = input.replace('select ', '').split('|');
             dialogJson[date+''][i] = {
                 type: 'select',
@@ -23,6 +22,7 @@ let recursiveAsyncReadLine = (date, i) => {
                 return rl.close();
             }
             dialogJson[(date+1)+''] = [];
+            console.log('day ' + (date+2));
             recursiveAsyncReadLine(date+1,0);
             return;
         }
@@ -33,14 +33,12 @@ let recursiveAsyncReadLine = (date, i) => {
                 dialog: input
             });
         }
+        console.log('V');
         recursiveAsyncReadLine(date,i+1);
     });
-
-    console.log(dialogJson);
 };
 console.log('welcome');
+console.log('day 1');
 
 
 recursiveAsyncReadLine(0, 0);
-
-
