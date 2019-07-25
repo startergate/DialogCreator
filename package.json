@@ -1,0 +1,12 @@
+{
+  "name": "dialogcreator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "STARTERGATE <32726809+startergate@users.noreply.github.com>",
+  "license": "ISC",
+  "description": ""
+}
