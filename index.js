@@ -15,8 +15,8 @@ let recursiveAsyncReadLine = (date, i) => {
                 type: 'select',
                 selection: [
                     {select: input[0].split(';')[0], response: {type:'dialog', from:'kor', dialog: input[0].split(';')[1]}},
-                    {select: input[1].split(';')[0], response: {type:'dialog', from:'kor', dialog: input[1].split(';')[1]}},
-                    {select: input[2].split(';')[0], response: {type:'dialog', from:'kor', dialog: input[2].split(';')[1]}}
+                    {select: input[1].split(';')[0], response: {type:'dialog', from:'mid', dialog: input[1].split(';')[1]}},
+                    {select: input[2].split(';')[0], response: {type:'dialog', from:'jap', dialog: input[2].split(';')[1]}}
                     ]
             };
         }
